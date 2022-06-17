@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Bodmas calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        <div id="calculator_display">
+            <input type="text" name="equation" id="equation" placeholder="enter equation">
+            <input type="text" name="result" id="result" placeholder="result">
+        </div>
+        <div class="calculator__keys"> 
+            <button type="button" value="+" class="operators" name="add" id="add" onclick="append('+')">+</button>
+            <button type="button" value="-" class="operators" name="sub" id="sub" onclick="append('-')">-</button>
+            <button type="button" value="x" class="operators" name="mult" id="mult" onclick="append('*')">&times;</button>
+            <button type="button" value="/" class="operators" name="div" id="div" onclick="append('/')">&divide;</button>
+
+            <button type="button" value="7" class="operands" name="seven" id="seven" onclick="append('7')">7</button>
+            <button type="button" value="8" class="operands" name="eight" id="eight" onclick="append('8')">8</button>
+            <button type="button" value="9" class="operands" name="nine" id="nine" onclick="append('9')">9</button>
+            <button type="button" value="Clear" class="clear" name="clear" id="clear" onclick="clearEquation()">AC</button>
+
+            <button type="button" value="4" class="operands" name="four" id="four" onclick="append('4')">4</button>
+            <button type="button" value="5" class="operands" name="five" id="five" onclick="append('5')">5</button>
+            <button type="button" value="6" class="operands" name="six" id="six" onclick="append('6')">6</button>
+            <button type="button" value="Backspace" class="clear" name="backspace" id="backspace" onclick="backspace(equation.value)">del</button>
+
+            <button type="button" value="1" class="operands" name="one" id="one" onclick="append('1')">1</button>
+            <button type="button" value="2" class="operands" name="two" id="two" onclick="append('2')">2</button>
+            <button type="button" value="3" class="operands" name="three" id="three" onclick="append('3')">3</button>
+            <button type="button" value="(" class="operators" name="open" id="open" onclick="append('(')">(</button>
+
+            <button type="button" value="0" class="operands" name="zero" id="zero" onclick="append('0')">0</button>
+            <button data-action="decimal">.</button>
+            <button type="button" value=")" class="operators" name="close" id="close" onclick="append(')')">)</button>
+            <button type="button" value="Evaluate" class="" name="equal" id="evaluate" onclick="startEvaluation(equation.value)">=</button>
+         </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
