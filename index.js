@@ -36,7 +36,7 @@ function startEvaluation(equation) {
                 brackets[bracketIndex++] = null
                 brackets[bracketIndex++] = null
                 operators[operatorIndex++] = equation.charAt(index)
-                operandString += " 1 "
+                operandString += " 1 " 
             }
             // Fetching operators and storing into operators[] array
             else {
